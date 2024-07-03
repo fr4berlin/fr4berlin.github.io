@@ -22,6 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
+          node-version: '21'
           submodules: recursive
           fetch-depth: 0
 
@@ -33,6 +34,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
+          node-version: '21'
           hugo-version: 'latest'
           extended: true  # Ensures the extended version is installed
 
@@ -50,8 +52,9 @@ jobs:
         run: hugo --minify
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
+          node-version: '21'
           path: ./public
 
   deploy:
@@ -64,5 +67,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-        with:
-          node-version: '21'
