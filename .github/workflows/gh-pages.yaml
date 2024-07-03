@@ -28,6 +28,11 @@ jobs:
           submodules: true
           fetch-depth: 0
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '21'
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
@@ -48,6 +53,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
         with:
-          node-version: 21
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
