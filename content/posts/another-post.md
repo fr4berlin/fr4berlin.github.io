@@ -57,14 +57,3 @@ amet consectetur adipiscing elit. Ut diam quam nulla porttitor
 massa. Odio euismod lacinia at quis risus sed vulputate odio
 ut. Euismod nisi porta lorem mollis aliquam ut porttitor leo
 a. Porttitor rhoncus dolor purus non enim.
-
-Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. At
-elementum eu facilisis sed odio morbi. Risus ultricies tristique nulla
-aliquet enim tortor. Adipiscing commodo elit at imperdiet dui. Blandit
-cursus risus at ultrices mi tempus imperdiet. Neque vitae tempus quam
-pellentesque nec nam aliquam sem. Montes nascetur ridiculus mus mauris
-vitae ultricies leo integer malesuada. Velit sed ullamcorper morbi
-tincidunt. At erat pellentesque adipiscing commodo elit at imperdiet
-dui. Laoreet non curabitur gravida arcu ac tortor dignissim
-convallis. Est placerat in egestas erat imperdiet sed euismod. Iaculis
-eu non diam phasellus vestibulum.
