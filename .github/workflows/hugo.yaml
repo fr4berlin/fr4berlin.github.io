@@ -23,9 +23,6 @@ jobs:
         with:
           node-version: '21'
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Build the Hugo site
         run: hugo --minify
 
