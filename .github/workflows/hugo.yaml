@@ -28,6 +28,74 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
+          node-version: '21'
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true  # Ensures the extended version is installed
+
+      - name: Verify Hugo Version
+        run: hugo version
+
+      - name: Install dependencies
+        run: npm ci  # Using 'ci' for a clean install based on package-lock.json
+
+      - name: Run Hugo (generate static pages)
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+          TZ: Europe/Berlin
+        run: hugo --minify
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+        with:
+          node-version: '21'
+name: Deploy Hugo site to Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
           node-version: '20'  # Updated to Node.js 20
 
       - name: Setup Hugo
@@ -50,7 +118,7 @@ jobs:
         run: hugo --minify
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4  # Updated to v4
+        uses: actions/upload-pages-artifact@v1
         with:
           path: ./public
 
@@ -63,6 +131,6 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1  # Ensure Node.js 20 compatibility
+        uses: actions/deploy-pages@v1
         with:
-          node-version: '20'  # Specify Node.js version for deploy step
+          node-version: '21'
