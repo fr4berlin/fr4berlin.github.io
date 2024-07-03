@@ -22,19 +22,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          node-version: '21'
           submodules: recursive
           fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
-        with:
-          node-version: '21'
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          node-version: '21'
           hugo-version: 'latest'
           extended: true  # Ensures the extended version is installed
 
