@@ -6,6 +6,11 @@ on:
       - main
   pull_request:
 
+permissions:
+  contents: write  # Updated to ensure write permissions for the GITHUB_TOKEN
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
