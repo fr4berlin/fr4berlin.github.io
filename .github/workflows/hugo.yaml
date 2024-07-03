@@ -54,7 +54,7 @@ jobs:
         id: upload-artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ inputs.name }}
+          name: page-artifact
           path: ./public
           retention-days: ${{ inputs.retention-days }}
           if-no-files-found: error
