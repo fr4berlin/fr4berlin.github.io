@@ -36,6 +36,8 @@ jobs:
         fetch-depth: 0
     - name: Run Hugo (generate static pages)
       uses: klakegg/actions-hugo@1.0.0
+      with:
+        node-version: 21
       env:
         HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
         HUGO_ENVIRONMENT: production
