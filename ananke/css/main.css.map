@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/home/runner/work/fr4berlin.github.io/fr4berlin.github.io",
+	"sourceRoot": "/home/milan/src/dinse",
 	"sources": [
 		"ananke/css/main.css"
 	],
