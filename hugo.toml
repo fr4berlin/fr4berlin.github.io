@@ -1,4 +1,4 @@
 baseURL = 'https://fr4berlin.github.io/'
 languageCode = 'en-us'
 title = 'fr4berlin weblog'
-theme = 'hugo-elate-theme'
+theme = 'gohugo-theme-ananke'
