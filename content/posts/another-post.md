@@ -3,7 +3,7 @@ title = 'yet another post'
 date = 2024-07-03T14:44:48+02:00
 draft = false
 +++
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+Lorem ipsum dolor sid amet, consectetur adipiscing elit, sed do
 eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et
 malesuada fames ac turpis. Sagittis id consectetur purus ut faucibus
 pulvinar elementum. Viverra aliquet eget sit amet tellus. Ut faucibus
