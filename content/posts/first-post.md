@@ -3,7 +3,7 @@ title = 'first post'
 date = 2024-06-19T14:44:48+02:00
 draft = false
 +++
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+fuu Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo duis
 ut diam quam. Sed vulputate odio ut enim blandit volutpat maecenas
 volutpat blandit. A lacus vestibulum sed arcu non. Facilisi nullam
